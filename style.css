@@ -1,64 +1,69 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
-  color: #333;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* PAGE COMMON */
 .page {
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding: 20px;
-  box-sizing: border-box;
+  text-align: center;
   animation: fadeIn 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
 }
+
+/* remove background-attachment fixed, keep full cover */
 #page1 {
-  background-image: url("/IMG_20251110_172702.png");
+  background-image: url("IMG_20251110_172702.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white; /* optional: makes text more visible */
 }
+
 #page2 {
   background-image: url("Screenshot_20221110-175942_Gallery.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white; /* optional: makes text more visible */
 }
+
 #page3 {
   background-image: url("Snapchat-892645816.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white; /* optional: makes text more visible */
 }
+
 #page4 {
-  background-image: url("/Screenshot\ \(233\).jpg");
+  background-image: url("Screenshot (233).jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white; /* optional: makes text more visible */
 }
+
 .page.active {
   display: flex;
 }
 
+/* text + btns */
 h1 {
   font-size: 2rem;
   color: #e91e63;
@@ -91,16 +96,12 @@ h1 {
 
 .photo {
   width: 300px;
-  height: auto;
   border-radius: 20px;
   margin-top: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Falling flowers (emojis 🌸🌷🌺) */
+/* falling flowers */
 .flower {
   position: fixed;
   top: -50px;
