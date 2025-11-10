@@ -18,7 +18,7 @@ buttons.forEach((button) => {
       });
     }
 
-    // If second page is active, start flower fall
+    // If second or fourth page is active, start flower fall
     if (nextPageId === "page2" || nextPageId === "page4") {
       startFlowerFall();
     }
@@ -42,9 +42,12 @@ function startFlowerFall() {
     }, 6000);
   }, 300);
 
-  // Stop flowers when leaving page 2
+  // Stop flowers when leaving page 2 or page 4
   const observer = new MutationObserver(() => {
-    if (!document.getElementById("page2").classList.contains("active")) {
+    if (
+      !document.getElementById("page2").classList.contains("active") &&
+      !document.getElementById("page4").classList.contains("active")
+    ) {
       clearInterval(interval);
       observer.disconnect();
     }
