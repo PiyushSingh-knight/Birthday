@@ -19,7 +19,7 @@ buttons.forEach((button) => {
     }
 
     // If second page is active, start flower fall
-    if (nextPageId === "page2") {
+    if (nextPageId === "page2" || nextPageId === "page4") {
       startFlowerFall();
     }
   });
